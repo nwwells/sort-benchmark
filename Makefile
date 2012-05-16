@@ -11,6 +11,7 @@ run: all
 	@python results.py ./time
 	@python results.py java Time
 	@python results.py python time.py
+	@python results.py node time.js
 
 clean:
 	@rm -vf Time.class ./time

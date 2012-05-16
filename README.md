@@ -31,7 +31,9 @@ access time and setting up global constants.
 
 Thoughts
 --------
-C++ is not faster than Java or Groovy.
+C++ is significantly faster than Java or Groovy, especially when one takes
+account the startup time of the vm. We keep track of both the total run time of
+the executables as well as the elapsed time to sort 10000 elements.
 
 It's not even consistently faster than Python or JS.
 
@@ -50,12 +52,12 @@ Just compile (or not) and run. You'll get 100 lines of "Time elapsed"
 messages for each program
 
 #### Java Compile & Run
-    javac Time.java
-    java Time
+    $ javac Time.java
+    $ python results.py java Time
 
 #### C++ Compile & Run
-    g++ time.cpp
-    ./a.out //not sure if this is platform specific?
+    $ make time
+    $ python results.py ./time
 
 #### Others
     groovy time.groovy
@@ -65,7 +67,7 @@ messages for each program
 Going Forward
 -------------
 I invite my C++ and Python friends to fork my github project and 
-improve the performance.
+improve the performance (challenge accepted!!!).
 
 I further invite my Perl and Ruby friends to fork and implement the 
 benchmark in your respective languages.

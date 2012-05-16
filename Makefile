@@ -10,6 +10,7 @@ Time.class: Time.java
 run:
 	@python results.py ./time
 	@python results.py java Time
+	@python results.py python time.py
 
 clean:
 	@rm -vf Time.class ./time

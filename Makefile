@@ -17,6 +17,7 @@ run: all
 	@python results.py node node-time.js
 	@python results.py groovy groovyTime.groovy
 	@python results.py ./gotime
+	@python results.py go run time.go
 
 clean:
 	@rm -vf JavaTime.class time gotime

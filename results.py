@@ -23,9 +23,13 @@ for i in output[:-1]:
         number = number.group()
         rs.push(float(number))
 rams = memory_pattern.search(output[-1]).group(1)
-print('{name:25s} ram: {ram:>10}   min: {rs.min:10}   max: {rs.max:10}'
-        ' mean: {rs.mean:10.1f} stddev: {rs.stddev:10.1f} '
-        ' total time: {total:0.4f}'.format(**{
+print('{name:25s} '
+        '   total time: {total:0.2f}s'
+        '   ram: {ram:>10}'
+        '   per loop:  mean: {rs.mean:10.1f}'
+        '   stddev: {rs.stddev:10.1f}'
+        '   min: {rs.min:10}   max: {rs.max:10}'
+        ''.format(**{
     'name': ' '.join(program[1:]),
     'total': total_time,
     'rs': rs,

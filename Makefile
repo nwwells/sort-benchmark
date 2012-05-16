@@ -7,7 +7,7 @@ time: time.cpp
 Time.class: Time.java
 	javac Time.java
 
-run:
+run: all
 	@python results.py ./time
 	@python results.py java Time
 	@python results.py python time.py

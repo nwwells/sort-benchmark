@@ -1,17 +1,18 @@
 CXXFLAGS=-Wall -O3
 
-all: time Time.class
+all: time JavaTime.class
 
 time: time.cpp
 
-Time.class: Time.java
-	javac Time.java
+JavaTime.class: JavaTime.java
+	javac JavaTime.java
 
 run: all
 	@python results.py ./time
-	@python results.py java Time
-	@python results.py python time.py
-	@python results.py node time.js
+	@python results.py java JavaTime
+	@python results.py python python-time.py
+	@python results.py node node-time.js
+	@python results.py groovy groovyTime.groovy
 
 clean:
-	@rm -vf Time.class ./time
+	@rm -vf JavaTime.class ./time

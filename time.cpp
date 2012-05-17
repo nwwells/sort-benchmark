@@ -6,14 +6,14 @@
 
 using namespace std;
 
-const int arraySize = 10000;
+const int arraySize = 1000000;
 
 int main(int argc, char* argv[]) {
     srand(time(NULL));
     struct timeval start, end;
     int myints[arraySize];
     long mtime, seconds, useconds;    
-    for (int j = 0; j < 100; ++j) {
+    for (int j = 0; j < 1000; ++j) {
         for (int i = 0; i < arraySize; ++i)
             myints[i] = rand() % 100000 + 1;
 

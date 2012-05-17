@@ -25,10 +25,10 @@ for i in output[:-1]:
 rams = memory_pattern.search(output[-1]).group(1)
 print('{name:25s} '
         '   total time: {total:0.2f}s'
-        '   ram: {ram:>10}'
-        '   per loop:  mean: {rs.mean:10.1f}'
-        '   stddev: {rs.stddev:10.1f}'
-        '   min: {rs.min:10}   max: {rs.max:10}'
+        '   ram: {ram:>15}'
+        '   per loop:  mean: {rs.mean:15.1f}'
+        '   stddev: {rs.stddev:15.1f}'
+        '   min: {rs.min:10}   max: {rs.max:15}'
         ''.format(**{
     'name': ' '.join(program[1:]),
     'total': total_time,

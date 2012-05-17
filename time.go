@@ -5,8 +5,8 @@ import "math/rand"
 import "sort"
 import "time"
 
-const MaxLength = 10000
-const MaxLoops = 100
+const MaxLength = 1000000
+const MaxLoops = 1000
 
 func main() {
 	nums := make([]int, MaxLength)

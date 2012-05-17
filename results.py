@@ -24,7 +24,7 @@ for i in output[:-1]:
         rs.push(float(number))
 rams = memory_pattern.search(output[-1]).group(1)
 print('{name:25s} '
-        '   total time: {total:0.2f}s'
+        '   total time: {total:10.2f}s'
         '   ram: {ram:>15}'
         '   per loop:  mean: {rs.mean:15.1f}'
         '   stddev: {rs.stddev:15.1f}'

@@ -1,12 +1,13 @@
-#include <iostream>
-#include <sys/time.h>
+#include <stdlib.h>
 #include <stdio.h>
-#include <algorithm>
-#include <vector>
-
-using namespace std;
+#include <sys/time.h>
+#include <time.h>
 
 const int arraySize = 1000000;
+
+static int comparitor(const void * p1, const void * p2) {
+    return (*(int *) p1 - *(int *) p2);
+}
 
 int main(int argc, char* argv[]) {
     srand(time(NULL));
@@ -18,7 +19,7 @@ int main(int argc, char* argv[]) {
             myints[i] = rand() % 100000 + 1;
 
         gettimeofday(&start, NULL);
-        sort(myints, myints + arraySize);
+        qsort(myints, arraySize, sizeof(int), comparitor);
         gettimeofday(&end, NULL);
 
         seconds  = end.tv_sec  - start.tv_sec;

@@ -1,7 +1,7 @@
 import java.util.*
-100.times {
+1000.times {
   def rand = new Random()
-  def arraySize = args.size() > 0 ? args[0] : 10000
+  def arraySize = args.size() > 0 ? args[0] : 1000000
   int[] array = new int[arraySize];
   arraySize.times { array[it] = Math.abs(rand.nextInt(100000))+1 }
   def startTime = System.nanoTime() / 1000
